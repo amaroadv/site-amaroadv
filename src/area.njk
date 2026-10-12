@@ -1,0 +1,24 @@
+---
+layout: base.njk
+pagination:
+  data: areasLista
+  size: 1
+  alias: area
+permalink: "/areas/{{ area.slug }}/"
+eleventyComputed:
+  titulo: "{{ area.area }}"
+  descricao: "{{ area.texto }}"
+---
+<section class="secao secao--estreita artigo">
+  <p class="sobretitulo"><a class="link" href="/#areas">Áreas de atuação</a> · {{ area.grupo }}</p>
+  <h1>{{ area.area }}</h1>
+  <p class="introducao">{{ area.texto }}</p>
+  <div class="texto">{{ area.detalhe | paragrafos | safe }}</div>
+  <p class="artigo__aviso">Conteúdo de caráter informativo. Não substitui a análise individual de cada caso por advogado.</p>
+  <nav class="outras-areas" aria-label="Outras áreas">
+    <p class="sobretitulo">Outras áreas</p>
+    <ul>
+      {% for a in areasLista %}{% if a.slug != area.slug %}<li><a href="/areas/{{ a.slug }}/">{{ a.area }}</a></li>{% endif %}{% endfor %}
+    </ul>
+  </nav>
+</section>

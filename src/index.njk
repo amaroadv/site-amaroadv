@@ -1,0 +1,110 @@
+---
+layout: base.njk
+permalink: /
+---
+<section class="capa"{% if site.foto_capa %} style="--foto: url('{{ site.foto_capa }}')"{% endif %}>
+  <div class="capa__conteudo">
+    <p class="sobretitulo">Advocacia em Bastos/SP</p>
+    <h1>{{ inicio.chamada }}</h1>
+    <p class="capa__sub">{{ inicio.subtitulo }}</p>
+    <div class="capa__acoes">
+      <a class="botao botao--claro" href="#areas">Áreas de atuação</a>
+      <a class="botao botao--contorno" href="#contato">Contato</a>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="escritorio">
+  <div class="secao__grade">
+    <div>
+      <p class="sobretitulo">Quem somos</p>
+      <h2>{{ inicio.sobre_titulo }}</h2>
+      {% if inicio.sobre_foto %}<img class="sobre__foto" src="{{ inicio.sobre_foto }}" alt="Fachada da sede do escritório em Bastos/SP" loading="lazy" width="1200" height="900">{% endif %}
+    </div>
+    <div class="texto">{{ inicio.sobre_texto | paragrafos | safe }}</div>
+  </div>
+  <ul class="principios">
+    {% for p in inicio.principios %}
+    <li><h3>{{ p.titulo }}</h3><p>{{ p.texto }}</p></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="secao secao--tom" id="areas">
+  <p class="sobretitulo">Atuação</p>
+  <h2>{{ areas.titulo }}</h2>
+  <p class="introducao">{{ areas.introducao }}</p>
+  {% for g in areas.grupos %}
+  <h3 class="grupo">{{ g.nome }}</h3>
+  <ul class="areas">
+    {% for i in g.itens %}
+    <li><a href="/areas/{{ i.slug }}/"><h4>{{ i.area }}</h4><p>{{ i.texto }}</p><span class="saiba">Saiba mais</span></a></li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</section>
+
+<section class="secao" id="socios">
+  <p class="sobretitulo">Sociedade</p>
+  <h2>{{ socios.titulo }}</h2>
+  <ul class="socios">
+    {% for s in socios.lista %}
+    <li>
+      {% if s.foto %}<img src="{{ s.foto }}" alt="{{ s.nome }}" loading="lazy">{% endif %}
+      <h3>{{ s.nome }}</h3>
+      <p class="oab">{{ s.oab }}</p>
+      {% if s.texto %}<p>{{ s.texto }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% if collections.artigos.length %}
+<section class="secao secao--tom" id="artigos">
+  <p class="sobretitulo">Conteúdo informativo</p>
+  <h2>Artigos</h2>
+  <ul class="artigos">
+    {% for a in collections.artigos | head(3) %}
+    <li><a href="{{ a.url }}"><span>{{ a.date | dataBR }}</span><h3>{{ a.data.title }}</h3><p>{{ a.data.resumo }}</p></a></li>
+    {% endfor %}
+  </ul>
+  <p><a class="link" href="/artigos/">Ver todos os artigos</a></p>
+</section>
+{% endif %}
+
+<section class="secao secao--escura" id="contato">
+  <p class="sobretitulo">Contato</p>
+  <h2>Onde estamos</h2>
+  <div class="contato">
+    <div class="unidades">
+      {% for u in site.unidades %}
+      <div class="unidade">
+        <p class="unidade__tipo">{{ u.tipo }}</p>
+        <h3>{{ u.cidade }}</h3>
+        <p>{{ u.endereco }}<br>CEP {{ u.cep }}</p>
+        {% if u.horario %}<p>{{ u.horario }}</p>{% endif %}
+        {% if u.mapa %}<p><a class="link link--claro" href="{{ u.mapa }}" target="_blank" rel="noopener">Ver no mapa</a></p>{% endif %}
+      </div>
+      {% endfor %}
+      <div class="unidade">
+        <p class="unidade__tipo">Canais</p>
+        <p>Telefone {{ site.telefone }}</p>
+        <p><a class="link link--claro" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        {% if site.whatsapp %}<p><a class="link link--claro" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsapp_mensagem | urlencode }}" target="_blank" rel="noopener">WhatsApp do escritório</a></p>{% endif %}
+      </div>
+    </div>
+
+    {% if site.formulario_ativo %}
+    <form class="formulario" name="contato" method="POST" data-netlify="true" netlify-honeypot="empresa_site" action="/obrigado/">
+      <input type="hidden" name="form-name" value="contato">
+      <p class="oculto"><label>Não preencha <input name="empresa_site"></label></p>
+      <label>Nome<input name="nome" required autocomplete="name"></label>
+      <label>Telefone ou WhatsApp<input name="telefone" required autocomplete="tel" inputmode="tel"></label>
+      <label>Cidade<input name="cidade" autocomplete="address-level2"></label>
+      <label>Assunto<textarea name="mensagem" rows="4" required placeholder="Descreva brevemente o motivo do contato. Não envie documentos por aqui."></textarea></label>
+      <label class="aceite"><input type="checkbox" name="aceite_privacidade" required><span>Li o <a href="/privacidade/" target="_blank">aviso de privacidade</a> e concordo com o uso dos meus dados para retorno do contato.</span></label>
+      <button class="botao botao--claro" type="submit">Enviar mensagem</button>
+    </form>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,16 @@
+{
+  "name": "site-amaroadv",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve --port=8080",
+    "build": "eleventy",
+    "cms": "decap-server"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@fontsource/cormorant-garamond": "^5.2.6",
+    "@fontsource/inter": "^5.2.6",
+    "decap-server": "^3.3.1"
+  }
+}

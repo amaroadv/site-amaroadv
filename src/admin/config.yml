@@ -1,0 +1,117 @@
+# Painel de edição do site. O backend definitivo é configurado na publicação.
+backend:
+  name: github
+  repo: PREENCHER/site-amaroadv
+  branch: main
+local_backend: true
+locale: pt
+logo_url: /assets/img/logo-grafite.png
+site_url: https://amaroadv.adv.br
+media_folder: src/assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: configuracoes
+    label: Configurações e contatos
+    files:
+      - name: site
+        label: Dados do escritório, contatos e unidades
+        file: src/_data/site.json
+        fields:
+          - { name: nome, label: Nome de exibição }
+          - { name: razao_social, label: Razão social }
+          - { name: registro_oab, label: Registro da sociedade na OAB }
+          - { name: cnpj, label: CNPJ }
+          - { name: url, label: Endereço do site }
+          - { name: descricao, label: Descrição para o Google, widget: text }
+          - { name: email, label: E-mail }
+          - { name: telefone, label: Telefone fixo }
+          - { name: whatsapp, label: "WhatsApp, só números com 55 e DDD", required: false }
+          - { name: whatsapp_exibicao, label: "WhatsApp como aparece no topo, ex. (14) 99727-6879", required: false }
+          - { name: whatsapp_mensagem, label: Mensagem inicial do WhatsApp }
+          - { name: foto_capa, label: Foto de fundo da capa, widget: image, required: false }
+          - { name: instagram, label: "Instagram, sem @" }
+          - { name: linkedin_nome, label: Nome no LinkedIn }
+          - { name: linkedin_url, label: Link do LinkedIn }
+          - { name: formulario_ativo, label: Mostrar formulário de contato, widget: boolean }
+          - name: unidades
+            label: Unidades
+            widget: list
+            summary: "{{fields.cidade}}"
+            fields:
+              - { name: cidade, label: Cidade }
+              - { name: tipo, label: "Tipo, ex. Sede ou Filial" }
+              - { name: endereco, label: Endereço }
+              - { name: cep, label: CEP }
+              - { name: horario, label: Horário de atendimento, required: false }
+              - { name: mapa, label: Link do Google Maps, required: false }
+              - { name: foto, label: Foto da unidade, widget: image, required: false }
+
+  - name: paginas
+    label: Textos das seções
+    files:
+      - name: inicio
+        label: Capa e O escritório
+        file: src/_data/inicio.json
+        fields:
+          - { name: chamada, label: Frase principal da capa }
+          - { name: subtitulo, label: Texto abaixo da frase, widget: text }
+          - { name: sobre_titulo, label: Título da seção O escritório }
+          - { name: sobre_texto, label: "Texto do escritório, parágrafos separados por linha em branco", widget: text }
+          - { name: sobre_foto, label: Foto da seção O escritório, widget: image, required: false }
+          - name: principios
+            label: Princípios
+            widget: list
+            summary: "{{fields.titulo}}"
+            fields:
+              - { name: titulo, label: Título }
+              - { name: texto, label: Texto, widget: text }
+      - name: areas
+        label: Áreas de atuação
+        file: src/_data/areas.json
+        fields:
+          - { name: titulo, label: Título }
+          - { name: introducao, label: Introdução, widget: text }
+          - name: grupos
+            label: Grupos
+            widget: list
+            summary: "{{fields.nome}}"
+            fields:
+              - { name: nome, label: Nome do grupo }
+              - name: itens
+                label: Áreas
+                widget: list
+                summary: "{{fields.area}}"
+                fields:
+                  - { name: area, label: Área }
+                  - { name: slug, label: "Endereço da página, sem acento e com hífen, ex. familia-e-sucessoes" }
+                  - { name: texto, label: Descrição curta do cartão, widget: text }
+                  - { name: detalhe, label: "Texto da página da área, parágrafos separados por linha em branco", widget: text }
+      - name: socios
+        label: Sócios
+        file: src/_data/socios.json
+        fields:
+          - { name: titulo, label: Título da seção }
+          - name: lista
+            label: Sócios
+            widget: list
+            summary: "{{fields.nome}}"
+            fields:
+              - { name: nome, label: Nome }
+              - { name: oab, label: OAB }
+              - { name: foto, label: Foto, widget: image, required: false }
+              - { name: texto, label: Breve apresentação, widget: text, required: false }
+
+  - name: artigos
+    label: Artigos
+    label_singular: Artigo
+    folder: src/artigos
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Título }
+      - { name: date, label: Data, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { name: autor, label: Autor, default: "Diogo Henrique Amaro da Silva, OAB/SP 491.016" }
+      - { name: resumo, label: Resumo, widget: text }
+      - { name: body, label: Texto, widget: markdown }

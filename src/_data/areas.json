@@ -1,0 +1,100 @@
+{
+  "titulo": "Áreas de atuação",
+  "introducao": "O escritório atua nas áreas cível, empresarial, contratual, bancária, trabalhista, previdenciária, administrativa, tributária e criminal, atendendo pessoas físicas e empresas.",
+  "grupos": [
+    {
+      "nome": "Pessoas físicas",
+      "itens": [
+        {
+          "area": "Cível",
+          "slug": "civel",
+          "texto": "Responsabilidade civil, indenizações, cobranças, obrigações e questões de propriedade e posse.",
+          "detalhe": "O Direito Civil regula as relações do dia a dia entre pessoas: contratos, dívidas, bens, vizinhança e a reparação de danos.\n\nPelo Código Civil, quem causa dano a outra pessoa por ato ilícito fica obrigado a repará-lo, conforme os arts. 186 e 927. A reparação pode alcançar o prejuízo material e, em certos casos, o dano moral.\n\nNesta área, o escritório atua em ações de indenização, cobrança, execução de títulos, ações possessórias, usucapião e conflitos envolvendo imóveis, tanto na defesa de quem pede quanto de quem é demandado."
+        },
+        {
+          "area": "Família e Sucessões",
+          "slug": "familia-e-sucessoes",
+          "texto": "Divórcio, guarda, alimentos, inventário, partilha e planejamento sucessório.",
+          "detalhe": "O Direito de Família trata das relações entre cônjuges, companheiros, pais e filhos. O Direito das Sucessões cuida da transmissão do patrimônio após o falecimento.\n\nOs alimentos são fixados conforme a necessidade de quem recebe e a possibilidade de quem paga, nos termos do art. 1.694 do Código Civil. A guarda compartilhada é a regra quando ambos os pais estão aptos, pelo art. 1.584, § 2º, do mesmo Código.\n\nQuando todos os herdeiros são maiores, capazes e estão de acordo, o divórcio e o inventário podem ser feitos em cartório, por escritura pública, com a participação obrigatória de advogado. Nos demais casos, o procedimento é judicial."
+        },
+        {
+          "area": "Consumidor",
+          "slug": "consumidor",
+          "texto": "Relações de consumo, cobranças indevidas, falhas na prestação de serviços e contratos de adesão.",
+          "detalhe": "O Código de Defesa do Consumidor, Lei nº 8.078/1990, protege quem adquire produtos ou contrata serviços como destinatário final.\n\nEntre os direitos básicos do consumidor, previstos no art. 6º, estão a informação adequada, a proteção contra práticas e cláusulas abusivas e a efetiva reparação de danos. Quem paga quantia cobrada indevidamente tem direito, em regra, à devolução em dobro, conforme o art. 42, parágrafo único.\n\nO escritório atua em demandas sobre cobranças indevidas, negativação, vícios de produtos, falhas de serviços, planos de saúde e contratos de adesão."
+        },
+        {
+          "area": "Bancário",
+          "slug": "bancario",
+          "texto": "Contratos bancários, financiamentos, empréstimos consignados e execuções.",
+          "detalhe": "As relações com bancos e instituições financeiras estão sujeitas ao Código de Defesa do Consumidor, conforme a Súmula 297 do Superior Tribunal de Justiça.\n\nIsso permite discutir encargos abusivos, descontos não autorizados, empréstimos consignados não contratados e cláusulas que coloquem o cliente em desvantagem exagerada.\n\nO escritório também atua na defesa de devedores em execuções bancárias e de cédulas de crédito, analisando a regularidade do título, dos cálculos e das garantias."
+        },
+        {
+          "area": "Trabalhista",
+          "slug": "trabalhista",
+          "texto": "Direitos decorrentes da relação de emprego, verbas rescisórias e adicionais.",
+          "detalhe": "A Consolidação das Leis do Trabalho e a Constituição Federal garantem ao empregado direitos como salário, férias, décimo terceiro, FGTS, horas extras e adicionais de insalubridade, periculosidade e noturno.\n\nO prazo para reclamar é de cinco anos, contados para trás a partir do ajuizamento, limitado a dois anos após o fim do contrato, conforme o art. 7º, XXIX, da Constituição Federal.\n\nO escritório atua em reclamações trabalhistas, reconhecimento de vínculo, verbas rescisórias, adicionais e indenizações decorrentes da relação de trabalho."
+        },
+        {
+          "area": "Previdenciário",
+          "slug": "previdenciario",
+          "texto": "Aposentadorias, benefícios por incapacidade, pensão por morte e benefício assistencial.",
+          "detalhe": "Os benefícios do Regime Geral de Previdência Social são regulados pela Lei nº 8.213/1991 e concedidos pelo INSS.\n\nEntre eles estão as aposentadorias, o benefício por incapacidade temporária, a aposentadoria por incapacidade permanente, a pensão por morte, o auxílio-reclusão e o salário-maternidade. O benefício assistencial de prestação continuada, conhecido como BPC, tem regras próprias no art. 20 da Lei nº 8.742/1993.\n\nO escritório atua no requerimento administrativo, no recurso contra indeferimentos e na ação judicial quando o benefício é negado, cessado ou concedido em valor inferior ao devido."
+        },
+        {
+          "area": "Servidores Públicos",
+          "slug": "servidores-publicos",
+          "texto": "Direitos e vantagens de servidores municipais e estaduais, na via administrativa e judicial.",
+          "detalhe": "Os servidores públicos têm seus direitos definidos pela Constituição Federal e pelo estatuto e pelas leis do ente a que estão vinculados, seja o Município, o Estado ou a União.\n\nQuestões frequentes envolvem adicionais, gratificações, progressões, licenças, quinquênios, sexta-parte, aposentadoria e processos administrativos disciplinares.\n\nO escritório atua tanto no requerimento administrativo quanto na ação judicial, sempre a partir da legislação específica aplicável ao cargo e ao ente público."
+        },
+        {
+          "area": "Criminal",
+          "slug": "criminal",
+          "texto": "Defesa em inquérito e ação penal, recursos e execução penal.",
+          "detalhe": "A Constituição Federal assegura a todo acusado o contraditório, a ampla defesa e a presunção de inocência, no art. 5º, LV e LVII.\n\nA defesa técnica atua desde a fase de investigação, no inquérito policial, passando pela resposta à acusação prevista no art. 396-A do Código de Processo Penal, pela instrução e pelos recursos aos tribunais.\n\nO escritório também atua na execução penal, regida pela Lei nº 7.210/1984, em pedidos de progressão de regime, livramento condicional, remição e demais direitos de quem cumpre pena."
+        }
+      ]
+    },
+    {
+      "nome": "Empresas",
+      "itens": [
+        {
+          "area": "Empresarial",
+          "slug": "empresarial",
+          "texto": "Constituição e alteração de sociedades, relações entre sócios e reorganizações.",
+          "detalhe": "O Direito Empresarial cuida da organização e do funcionamento das empresas e das relações entre os sócios.\n\nA sociedade limitada, forma mais comum no país, é regulada pelos arts. 1.052 e seguintes do Código Civil. Um contrato social bem redigido define a administração, a divisão de resultados, a entrada e a saída de sócios e a solução de impasses.\n\nO escritório atua na constituição e alteração de sociedades, em acordos entre sócios, na apuração de haveres e na dissolução de sociedades."
+        },
+        {
+          "area": "Contratos",
+          "slug": "contratos",
+          "texto": "Elaboração, revisão e negociação de contratos civis e empresariais.",
+          "detalhe": "O contrato é o principal instrumento de segurança nas relações civis e comerciais. Pelo art. 422 do Código Civil, as partes devem agir com boa-fé tanto na conclusão quanto na execução do contrato.\n\nA análise prévia permite identificar riscos, cláusulas desequilibradas, lacunas e garantias insuficientes antes da assinatura.\n\nO escritório elabora, revisa e acompanha a negociação de contratos de compra e venda, locação, prestação de serviços, parceria, franquia e outros, e atua quando há descumprimento."
+        },
+        {
+          "area": "Tributário",
+          "slug": "tributario",
+          "texto": "Defesa em autuações e execuções fiscais e discussão de tributos indevidos.",
+          "detalhe": "As relações entre contribuintes e o Fisco são regidas pela Constituição Federal e pelo Código Tributário Nacional, que estabelecem os limites do poder de tributar.\n\nA cobrança judicial de tributos ocorre pela execução fiscal, regulada pela Lei nº 6.830/1980, na qual o contribuinte pode se defender por embargos ou, em certas hipóteses, por exceção de pré-executividade.\n\nO escritório atua na defesa em autos de infração e execuções fiscais e em ações para discutir ou recuperar tributos cobrados indevidamente."
+        },
+        {
+          "area": "Trabalhista empresarial",
+          "slug": "trabalhista-empresarial",
+          "texto": "Defesa em reclamações trabalhistas e orientação preventiva na gestão de pessoal.",
+          "detalhe": "Para o empregador, a prevenção é a forma mais eficiente de reduzir o passivo trabalhista. Contratos, controles de jornada, recibos e documentos de saúde e segurança bem organizados fazem diferença em uma eventual reclamação.\n\nNa Justiça do Trabalho, a defesa da empresa exige impugnação específica dos pedidos e prova documental consistente.\n\nO escritório atua na defesa de empresas em reclamações trabalhistas e na orientação sobre contratação, jornada, rescisões e rotinas de pessoal."
+        },
+        {
+          "area": "Administrativo",
+          "slug": "administrativo",
+          "texto": "Licitações, contratos administrativos e processos perante órgãos públicos.",
+          "detalhe": "O Direito Administrativo regula a atuação da Administração Pública e suas relações com cidadãos e empresas.\n\nAs licitações e os contratos administrativos são hoje disciplinados pela Lei nº 14.133/2021. Os processos administrativos devem respeitar o contraditório e a ampla defesa, garantidos pelo art. 5º, LV, da Constituição Federal.\n\nO escritório atua em licitações, contratos com o poder público, processos administrativos sancionadores e na defesa perante órgãos de fiscalização."
+        },
+        {
+          "area": "Criminal empresarial",
+          "slug": "criminal-empresarial",
+          "texto": "Defesa de empresas e gestores em procedimentos de natureza penal.",
+          "detalhe": "A atividade empresarial pode dar origem a investigações de natureza penal, como as relativas a crimes contra a ordem tributária, previstos na Lei nº 8.137/1990, e crimes ambientais, previstos na Lei nº 9.605/1998.\n\nA atuação técnica desde a fase de investigação é decisiva para preservar os direitos dos gestores e da própria empresa.\n\nO escritório atua na defesa de empresários e administradores em inquéritos, ações penais e recursos, e na orientação preventiva sobre riscos penais da atividade."
+        }
+      ]
+    }
+  ]
+}

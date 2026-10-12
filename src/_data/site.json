@@ -1,0 +1,29 @@
+{
+  "nome": "Amaro Sociedade de Advogados",
+  "razao_social": "Cirso Amaro e Diogo Amaro Sociedade de Advogados",
+  "registro_oab": "OAB/SP 29.774",
+  "cnpj": "33.650.587/0001-33",
+  "url": "https://amaroadv.adv.br",
+  "descricao": "Escritório de advocacia em Bastos/SP, com atuação consultiva e contenciosa para pessoas físicas e empresas.",
+  "email": "amaroadv@hotmail.com",
+  "telefone": "+55 14 3478-4474",
+  "whatsapp": "5514997276879",
+  "whatsapp_mensagem": "Olá, vim pelo site e gostaria de falar com o escritório.",
+  "instagram": "amaro_advogados",
+  "linkedin_nome": "Amaro Sociedade de Advogados",
+  "linkedin_url": "https://www.linkedin.com/company/cirso-amaro-da-silva-sociedade-de-advogados/",
+  "formulario_ativo": true,
+  "unidades": [
+    {
+      "cidade": "Bastos/SP",
+      "tipo": "Sede",
+      "endereco": "Rua Vereador Shigueru Shida, nº 106, Jardim Hikari",
+      "cep": "17694-010",
+      "horario": "Segunda a sexta, das 8h às 18h",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Rua+Vereador+Shigueru+Shida+106+Bastos+SP",
+      "foto": "/assets/img/fachada.jpg"
+    }
+  ],
+  "whatsapp_exibicao": "(14) 99727-6879",
+  "foto_capa": "/assets/img/fachada-capa.jpg"
+}

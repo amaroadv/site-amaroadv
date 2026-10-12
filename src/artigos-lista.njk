@@ -1,0 +1,16 @@
+---
+layout: base.njk
+titulo: Artigos
+permalink: /artigos/
+---
+<section class="secao secao--estreita">
+  <p class="sobretitulo">Conteúdo informativo</p>
+  <h1>Artigos</h1>
+  <ul class="artigos artigos--lista">
+    {% for a in collections.artigos %}
+    <li><a href="{{ a.url }}"><span>{{ a.date | dataBR }}</span><h3>{{ a.data.title }}</h3><p>{{ a.data.resumo }}</p></a></li>
+    {% else %}
+    <li>Nenhum artigo publicado ainda.</li>
+    {% endfor %}
+  </ul>
+</section>

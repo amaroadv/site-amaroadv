@@ -1,0 +1,24 @@
+---
+layout: base.njk
+titulo: Unidades
+permalink: /unidades/
+---
+<section class="secao">
+  <p class="sobretitulo">Onde estamos</p>
+  <h1>Unidades</h1>
+  <p class="introducao">Atendimento presencial nas unidades abaixo e atendimento online para clientes de outras cidades e estados.</p>
+  <ul class="unidades-lista">
+    {% for u in site.unidades %}
+    <li>
+      {% if u.foto %}<img src="{{ u.foto }}" alt="Fachada da unidade de {{ u.cidade }}" loading="lazy" width="1200" height="900">{% endif %}
+      <div>
+        <p class="unidade__tipo">{{ u.tipo }}</p>
+        <h2>{{ u.cidade }}</h2>
+        <p>{{ u.endereco }}<br>CEP {{ u.cep }}</p>
+        {% if u.horario %}<p>{{ u.horario }}</p>{% endif %}
+        {% if u.mapa %}<p><a class="link" href="{{ u.mapa }}" target="_blank" rel="noopener">Ver no mapa</a></p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

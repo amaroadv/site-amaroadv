@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% set t = titulo or title %}<title>{% if t %}{{ t }} | {% endif %}{{ site.nome }}</title>
+  <meta name="description" content="{{ descricao or site.descricao }}">
+  <link rel="icon" href="/assets/img/favicon.png">
+  <meta property="og:title" content="{{ t or site.nome }}">
+  <meta property="og:description" content="{{ descricao or resumo or site.descricao }}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/og.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/estilo.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "{{ site.nome }}",
+    "legalName": "{{ site.razao_social }}",
+    "url": "{{ site.url }}",
+    "email": "{{ site.email }}",
+    "telephone": "{{ site.telefone }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.unidades[0].endereco }}",
+      "addressLocality": "Bastos",
+      "addressRegion": "SP",
+      "postalCode": "{{ site.unidades[0].cep }}",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="topo" id="topo">
+    <div class="topo__barra">
+      <a class="marca" href="/" aria-label="{{ site.nome }}, página inicial">
+        <img src="/assets/img/simbolo-branco.png" alt="" width="26" height="36">
+        <span class="marca__texto"><strong>AMARO</strong><small>Sociedade de Advogados</small></span>
+      </a>
+      {% if site.whatsapp %}<a class="topo__whats" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsapp_mensagem | urlencode }}" target="_blank" rel="noopener"><small>WhatsApp</small>{{ site.whatsapp_exibicao }}</a>{% endif %}
+      <button class="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="/#escritorio">O escritório</a>
+        <a href="/#areas">Áreas de atuação</a>
+        <a href="/#socios">Sócios</a>
+        <a href="/unidades/">Unidades</a>
+        {% if collections.artigos.length %}<a href="/artigos/">Artigos</a>{% endif %}
+        <a href="/#contato" class="menu__destaque">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__grade">
+      <div>
+        <img src="/assets/img/logo-branca.png" alt="{{ site.nome }}" class="rodape__logo" width="96" height="114">
+      </div>
+      <div>
+        <p class="rodape__nome">{{ site.razao_social }}</p>
+        <p>{{ site.registro_oab }} · CNPJ {{ site.cnpj }}</p>
+        {% for u in site.unidades %}
+        <p>{{ u.endereco }}, {{ u.cidade }}, CEP {{ u.cep }}</p>
+        {% endfor %}
+      </div>
+      <div>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <p><a href="https://instagram.com/{{ site.instagram }}" rel="noopener" target="_blank">Instagram @{{ site.instagram }}</a></p>
+        <p><a href="{{ site.linkedin_url }}" rel="noopener" target="_blank">LinkedIn {{ site.linkedin_nome }}</a></p>
+        <p><a href="/privacidade/">Aviso de privacidade</a></p>
+      </div>
+    </div>
+    <p class="rodape__aviso">Conteúdo de caráter informativo, nos termos do Provimento nº 205/2021 do Conselho Federal da OAB.</p>
+  </footer>
+
+  {% if site.whatsapp %}
+  <a class="whatsapp" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsapp_mensagem | urlencode }}" target="_blank" rel="noopener" aria-label="WhatsApp do escritório">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.5 10.5 0 0 1-1.7-5.7C5.1 10 10 5.2 16 5.2S26.9 10 26.9 15.8 22 26.4 16 26.4zm6-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+  {% endif %}
+
+  <script>
+    const b = document.querySelector('.menu-botao'), m = document.getElementById('menu');
+    b.addEventListener('click', () => { const a = b.getAttribute('aria-expanded') === 'true'; b.setAttribute('aria-expanded', !a); m.classList.toggle('aberto', !a); });
+    m.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { b.setAttribute('aria-expanded', false); m.classList.remove('aberto'); }));
+  </script>
+</body>
+</html>

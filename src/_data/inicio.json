@@ -1,0 +1,21 @@
+{
+  "chamada": "Advocacia com seriedade, proximidade e atenção a cada caso.",
+  "subtitulo": "Atuação consultiva e contenciosa para pessoas físicas e empresas, com atendimento presencial em Bastos/SP e atendimento online em todo o Brasil.",
+  "sobre_titulo": "O escritório",
+  "sobre_texto": "A Amaro Sociedade de Advogados é um escritório sediado em Bastos/SP, no interior paulista, dedicado à advocacia em diversas áreas do Direito.\n\nO trabalho é conduzido com análise técnica individualizada, comunicação clara e acompanhamento próximo de cada etapa, tanto na prevenção de conflitos quanto na atuação perante o Poder Judiciário e a Administração Pública.\n\nO atendimento é feito presencialmente na sede e também de forma online, o que permite acompanhar clientes e processos em diferentes cidades e estados.",
+  "principios": [
+    {
+      "titulo": "Análise individual",
+      "texto": "Cada situação é estudada a partir dos documentos e dos fatos concretos, antes de qualquer orientação."
+    },
+    {
+      "titulo": "Comunicação clara",
+      "texto": "O cliente é informado sobre o andamento do seu caso em linguagem acessível, sem juridiquês."
+    },
+    {
+      "titulo": "Ética e sigilo",
+      "texto": "Atuação pautada pelo Estatuto da Advocacia e pelo Código de Ética e Disciplina da OAB."
+    }
+  ],
+  "sobre_foto": "/assets/img/fachada.jpg"
+}
