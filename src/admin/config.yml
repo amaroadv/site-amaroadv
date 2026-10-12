@@ -1,7 +1,7 @@
 # Painel de edição do site. O backend definitivo é configurado na publicação.
 backend:
   name: github
-  repo: PREENCHER/site-amaroadv
+  repo: amaroadv/site-amaroadv
   branch: main
 local_backend: true
 locale: pt
