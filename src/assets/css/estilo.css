@@ -6,13 +6,13 @@
 @font-face { font-family: "Inter"; src: url("/assets/fonts/inter-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
 
 :root {
-  --grafite: #262626;
-  --grafite-2: #323231;
-  --papel: #f7f5f1;
-  --papel-2: #efebe4;
-  --tinta: #262626;
-  --tinta-suave: #5f5b55;
-  --linha: #ddd7cd;
+  --grafite: #1F2732;
+  --grafite-2: #161D27;
+  --papel: #f6f6f4;
+  --papel-2: #ebebee;
+  --tinta: #1c232d;
+  --tinta-suave: #5a616b;
+  --linha: #d9dbe0;
   --bronze: #9a8262;
   --bronze-claro: #c8b494;
   --serifa: "Cormorant", Georgia, serif;
@@ -42,9 +42,9 @@ p { margin: 0 0 1em; }
 .marca img { width: 26px; height: auto; }
 .marca__texto { display: flex; flex-direction: column; line-height: 1.1; }
 .marca__texto strong { font: 500 1.35rem/1 var(--serifa); letter-spacing: .14em; }
-.marca__texto small { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: #bdb8b0; margin-top: 3px; }
+.marca__texto small { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: #aeb5bf; margin-top: 3px; }
 .menu { display: flex; gap: 28px; align-items: center; }
-.menu a { text-decoration: none; font-size: .9rem; color: #e4e0d9; }
+.menu a { text-decoration: none; font-size: .9rem; color: #dfe3e8; }
 .menu a:hover { color: #fff; }
 .menu__destaque { border: 1px solid rgba(255,255,255,.35); padding: 8px 18px; border-radius: 2px; }
 .menu-botao { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
@@ -54,7 +54,7 @@ p { margin: 0 0 1em; }
 .capa { position: relative; overflow: hidden; background: var(--grafite); color: #fff; padding: clamp(72px, 12vw, 150px) var(--gutter) clamp(80px, 12vw, 140px); }
 .capa__conteudo { position: relative; z-index: 1; max-width: var(--largura); margin: 0 auto; }
 .capa h1 { max-width: 19ch; }
-.capa__sub { max-width: 54ch; color: #cfcac2; font-size: 1.08rem; margin-top: 1.2rem; }
+.capa__sub { max-width: 54ch; color: #c5cbd3; font-size: 1.08rem; margin-top: 1.2rem; }
 .capa .sobretitulo { color: var(--bronze-claro); }
 .capa__acoes { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 2.2rem; }
 .capa__simbolo { position: absolute; right: max(-60px, calc((100vw - var(--largura)) / 2 - 40px)); bottom: -40px; width: clamp(240px, 34vw, 440px); opacity: .07; pointer-events: none; }
@@ -109,11 +109,11 @@ p { margin: 0 0 1em; }
 /* Contato */
 .contato { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 6vw, 80px); margin-top: 2rem; }
 .unidades { display: grid; gap: 32px; align-content: start; }
-.unidade p { color: #cfcac2; margin-bottom: .4em; }
+.unidade p { color: #c5cbd3; margin-bottom: .4em; }
 .unidade h3 { font-size: 1.8rem; }
 .unidade__tipo { font-size: .72rem !important; letter-spacing: .2em; text-transform: uppercase; color: var(--bronze-claro) !important; }
 .formulario { display: grid; gap: 18px; background: var(--grafite-2); padding: clamp(24px, 4vw, 40px); border: 1px solid rgba(255,255,255,.08); }
-.formulario label { display: grid; gap: 6px; font-size: .85rem; color: #d9d4cc; }
+.formulario label { display: grid; gap: 6px; font-size: .85rem; color: #ccd2da; }
 .formulario input, .formulario textarea { font: inherit; font-size: 1rem; color: #fff; background: transparent; border: 0; border-bottom: 1px solid rgba(255,255,255,.3); padding: 8px 0; border-radius: 0; }
 .formulario input:focus, .formulario textarea:focus { outline: none; border-bottom-color: var(--bronze-claro); }
 .formulario textarea { resize: vertical; }
@@ -124,7 +124,7 @@ p { margin: 0 0 1em; }
 .oculto { position: absolute; left: -9999px; }
 
 /* Rodapé */
-.rodape { background: #1c1c1c; color: #a9a49c; font-size: .88rem; padding: 56px var(--gutter) 28px; }
+.rodape { background: #101820; color: #a3aab4; font-size: .88rem; padding: 56px var(--gutter) 28px; }
 .rodape__grade { max-width: var(--largura); margin: 0 auto; display: grid; grid-template-columns: auto 1.4fr 1fr; gap: 48px; align-items: start; }
 .rodape__logo { width: 72px; opacity: .9; }
 .rodape__nome { color: #fff; font-family: var(--serifa); font-size: 1.25rem; }
@@ -153,7 +153,7 @@ p { margin: 0 0 1em; }
 }
 
 /* Capa com foto */
-.capa { background-color: var(--grafite); background-image: linear-gradient(90deg, rgba(24,24,24,.94) 0%, rgba(24,24,24,.82) 45%, rgba(24,24,24,.55) 100%), var(--foto, none); background-size: cover; background-position: center 60%; }
+.capa { background-color: var(--grafite); background-image: linear-gradient(90deg, rgba(16,24,32,.94) 0%, rgba(22,29,39,.82) 45%, rgba(31,39,50,.5) 100%), var(--foto, none); background-size: cover; background-position: center 60%; }
 .sobre__foto { margin-top: 28px; aspect-ratio: 4/3; object-fit: cover; width: 100%; filter: saturate(.75); }
 
 /* Topo com WhatsApp */
@@ -182,5 +182,5 @@ p { margin: 0 0 1em; }
 @media (max-width: 860px) {
   .topo__whats { display: none; }
   .unidades-lista li { grid-template-columns: 1fr; gap: 20px; }
-  .capa { background-image: linear-gradient(180deg, rgba(24,24,24,.9) 0%, rgba(24,24,24,.78) 100%), var(--foto, none); }
+  .capa { background-image: linear-gradient(180deg, rgba(16,24,32,.9) 0%, rgba(31,39,50,.78) 100%), var(--foto, none); }
 }
