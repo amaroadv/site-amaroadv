@@ -1,0 +1,12 @@
+[build]
+  command = "npx @11ty/eleventy"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "https://www.amaroadv.adv.br/*"
+  to = "https://amaroadv.adv.br/:splat"
+  status = 301
+  force = true
