@@ -88,7 +88,8 @@ p { margin: 0 0 1em; }
 .areas h4 { margin-bottom: .3em; }
 .areas p { color: var(--tinta-suave); font-size: .93rem; margin: 0; }
 
-.socios { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+.socios { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(32px, 6vw, 88px); }
+@media (max-width: 640px) { .socios { grid-template-columns: 1fr; } }
 .socios li { border-top: 1px solid var(--tinta); padding-top: 22px; }
 .socios img { aspect-ratio: 4/5; object-fit: cover; margin-bottom: 18px; filter: grayscale(.2); }
 .socios h3 { font-size: 1.65rem; margin-bottom: .2em; }

@@ -1,7 +1,17 @@
 {
   "titulo": "Sócios",
   "lista": [
-    { "nome": "Cirso Amaro da Silva", "oab": "OAB/SP 229.822", "foto": "", "texto": "" },
-    { "nome": "Diogo Henrique Amaro da Silva", "oab": "OAB/SP 491.016", "foto": "", "texto": "" }
+    {
+      "nome": "Cirso Amaro da Silva",
+      "oab": "OAB/SP 229.822",
+      "foto": "/assets/img/socio-cirso.jpg?v=1",
+      "texto": ""
+    },
+    {
+      "nome": "Diogo Henrique Amaro da Silva",
+      "oab": "OAB/SP 491.016",
+      "foto": "/assets/img/socio-diogo.jpg?v=1",
+      "texto": ""
+    }
   ]
 }
