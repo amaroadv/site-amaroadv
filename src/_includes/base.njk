@@ -6,6 +6,11 @@
   {% set t = titulo or title %}<title>{% if t %}{{ t }} | {% endif %}{{ site.nome }}</title>
   <meta name="description" content="{{ descricao or site.descricao }}">
   <link rel="icon" href="/assets/img/favicon.png">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.nome }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:title" content="{{ t or site.nome }}">
   <meta property="og:description" content="{{ descricao or resumo or site.descricao }}">
   <meta property="og:image" content="{{ site.url }}/assets/img/og.jpg">
@@ -21,6 +26,11 @@
     "url": "{{ site.url }}",
     "email": "{{ site.email }}",
     "telephone": "{% if site.telefone %}{{ site.telefone }}{% else %}+{{ site.whatsapp }}{% endif %}",
+    "image": "{{ site.url }}/assets/img/og.jpg",
+    "areaServed": { "@type": "City", "name": "Bastos" },
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "hasMap": "{{ site.unidades[0].mapa }}",
+    "sameAs": ["https://www.instagram.com/{{ site.instagram }}/", "{{ site.linkedin_url }}"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "{{ site.unidades[0].endereco }}",

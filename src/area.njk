@@ -6,8 +6,8 @@ pagination:
   alias: area
 permalink: "/areas/{{ area.slug }}/"
 eleventyComputed:
-  titulo: "{{ area.area }}"
-  descricao: "{{ area.texto }}"
+  titulo: "{{ area.tituloSeo }}"
+  descricao: "{{ area.texto }} Escritório em Bastos/SP, com atendimento presencial e online."
 ---
 <section class="secao secao--estreita artigo">
   <p class="sobretitulo"><a class="link" href="/#areas">Áreas de atuação</a> · {{ area.grupo }}</p>
