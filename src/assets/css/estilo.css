@@ -6,15 +6,15 @@
 @font-face { font-family: "Inter"; src: url("/assets/fonts/inter-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
 
 :root {
-  --grafite: #1F2732;
-  --grafite-2: #161D27;
-  --papel: #f6f6f4;
-  --papel-2: #ebebee;
-  --tinta: #1c232d;
-  --tinta-suave: #5a616b;
-  --linha: #d9dbe0;
-  --bronze: #9a8262;
-  --bronze-claro: #c8b494;
+  --grafite: #102230;
+  --grafite-2: #08131B;
+  --papel: #F5F1E8;
+  --papel-2: #ECE6D7;
+  --tinta: #10222F;
+  --tinta-suave: #4F5A63;
+  --linha: #DDD5C3;
+  --bronze: #7A5F2C;
+  --bronze-claro: #D6B670;
   --serifa: "Cormorant", Georgia, serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --largura: 1120px;
@@ -60,8 +60,8 @@ p { margin: 0 0 1em; }
 .capa__simbolo { position: absolute; right: max(-60px, calc((100vw - var(--largura)) / 2 - 40px)); bottom: -40px; width: clamp(240px, 34vw, 440px); opacity: .07; pointer-events: none; }
 
 .botao { display: inline-block; text-decoration: none; font: 500 .9rem/1 var(--sans); letter-spacing: .04em; padding: 15px 26px; border-radius: 2px; border: 1px solid transparent; cursor: pointer; transition: background .2s, color .2s; }
-.botao--claro { background: var(--papel); color: var(--grafite); }
-.botao--claro:hover { background: #fff; }
+.botao--claro { background: var(--bronze-claro); color: var(--grafite); }
+.botao--claro:hover { background: #E4CB8E; }
 .botao--contorno { border-color: rgba(255,255,255,.4); color: #fff; }
 .botao--contorno:hover { background: rgba(255,255,255,.08); }
 
@@ -124,7 +124,7 @@ p { margin: 0 0 1em; }
 .oculto { position: absolute; left: -9999px; }
 
 /* Rodapé */
-.rodape { background: #101820; color: #a3aab4; font-size: .88rem; padding: 56px var(--gutter) 28px; }
+.rodape { background: var(--grafite-2); color: #a3aab4; font-size: .88rem; padding: 56px var(--gutter) 28px; }
 .rodape__grade { max-width: var(--largura); margin: 0 auto; display: grid; grid-template-columns: auto 1.4fr 1fr; gap: 48px; align-items: start; }
 .rodape__logo { width: 72px; opacity: .9; }
 .rodape__nome { color: #fff; font-family: var(--serifa); font-size: 1.25rem; }
@@ -153,7 +153,7 @@ p { margin: 0 0 1em; }
 }
 
 /* Capa com foto */
-.capa { background-color: var(--grafite); background-image: linear-gradient(90deg, rgba(16,24,32,.94) 0%, rgba(22,29,39,.82) 45%, rgba(31,39,50,.5) 100%), var(--foto, none); background-size: cover; background-position: center 60%; }
+.capa { background-color: var(--grafite); background-image: linear-gradient(90deg, rgba(8,19,27,.94) 0%, rgba(11,27,38,.84) 45%, rgba(16,34,48,.58) 100%), var(--foto, none); background-size: cover; background-position: center 60%; }
 .sobre__foto { margin-top: 28px; aspect-ratio: 4/3; object-fit: cover; width: 100%; filter: saturate(.75); }
 
 /* Topo com WhatsApp */
@@ -182,5 +182,5 @@ p { margin: 0 0 1em; }
 @media (max-width: 860px) {
   .topo__whats { display: none; }
   .unidades-lista li { grid-template-columns: 1fr; gap: 20px; }
-  .capa { background-image: linear-gradient(180deg, rgba(16,24,32,.9) 0%, rgba(31,39,50,.78) 100%), var(--foto, none); }
+  .capa { background-image: linear-gradient(180deg, rgba(8,19,27,.92) 0%, rgba(16,34,48,.80) 100%), var(--foto, none); }
 }
