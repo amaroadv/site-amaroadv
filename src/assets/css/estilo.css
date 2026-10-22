@@ -134,7 +134,7 @@ p { margin: 0 0 1em; }
 .rodape__aviso { max-width: var(--largura); margin: 40px auto 0 !important; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.08); font-size: .78rem; }
 
 /* WhatsApp */
-.whatsapp { position: fixed; right: 20px; bottom: 20px; z-index: 30; display: flex; align-items: center; gap: 8px; background: #1f7a4d; color: #fff; text-decoration: none; padding: 12px 18px 12px 14px; border-radius: 999px; font-size: .9rem; font-weight: 500; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+.whatsapp { position: fixed; right: 20px; bottom: 76px; z-index: 30; display: flex; align-items: center; gap: 8px; background: #1f7a4d; color: #fff; text-decoration: none; padding: 12px 18px 12px 14px; border-radius: 999px; font-size: .9rem; font-weight: 500; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
 .whatsapp svg { width: 22px; height: 22px; }
 .whatsapp:hover { background: #196640; }
 
