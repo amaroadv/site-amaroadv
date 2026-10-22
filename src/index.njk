@@ -88,7 +88,7 @@ permalink: /
       {% endfor %}
       <div class="unidade">
         <p class="unidade__tipo">Canais</p>
-        <p>Telefone {{ site.telefone }}</p>
+        {% if site.telefone %}<p>Telefone {{ site.telefone }}</p>{% endif %}
         <p><a class="link link--claro" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         {% if site.whatsapp %}<p><a class="link link--claro" href="https://wa.me/{{ site.whatsapp }}?text={{ site.whatsapp_mensagem | urlencode }}" target="_blank" rel="noopener">WhatsApp do escritório</a></p>{% endif %}
       </div>

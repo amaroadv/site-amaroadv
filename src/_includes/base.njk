@@ -20,7 +20,7 @@
     "legalName": "{{ site.razao_social }}",
     "url": "{{ site.url }}",
     "email": "{{ site.email }}",
-    "telephone": "{{ site.telefone }}",
+    "telephone": "{% if site.telefone %}{{ site.telefone }}{% else %}+{{ site.whatsapp }}{% endif %}",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "{{ site.unidades[0].endereco }}",

@@ -25,7 +25,7 @@ collections:
           - { name: url, label: Endereço do site }
           - { name: descricao, label: Descrição para o Google, widget: text }
           - { name: email, label: E-mail }
-          - { name: telefone, label: Telefone fixo }
+          - { name: telefone, label: "Telefone fixo, deixe em branco se não houver", required: false }
           - { name: whatsapp, label: "WhatsApp, só números com 55 e DDD", required: false }
           - { name: whatsapp_exibicao, label: "WhatsApp como aparece no topo, ex. (14) 99727-6879", required: false }
           - { name: whatsapp_mensagem, label: Mensagem inicial do WhatsApp }
